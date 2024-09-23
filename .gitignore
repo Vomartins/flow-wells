@@ -1,0 +1,10 @@
+*~
+rocprof-outputs/*
+!rocprof-outputs/
+roofline.py
+teste-pandas.py
+roofline_metrics.txt
+pmc_1/
+report-2.pdf
+report.ods
+.~lock.report.ods#

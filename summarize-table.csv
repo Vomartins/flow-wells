@@ -1,0 +1,2 @@
+File Name,Simulation Time,STDW Rate Calculation Time,STDW computePerfRate Time,STDW Apply Time,GPU STDW Apply Time,STDW Apply Number of Calls,GPU STDW Apply Number of Calls,MSW Rate Calulation Time,MSW computePerfRate Time,MSW Apply Time,MSW Apply Number of Calls,MSW Data Transfer Time
+NORNE_ATW2013_1A_MSW-165932-sim-output,1220.13,0.0,0.0,0.0,-1,0.0,-1,15.99461,37.31215,19.36718,1664226.0,0.0
