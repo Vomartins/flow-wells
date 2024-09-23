@@ -1,7 +1,11 @@
 The scripts in this repository perform some computational experiments with **OPM Flow Simulator** (https://opm-project.org/).
 The scripts may be changed to run a specific experiment without README update.
 
-## 
+## ROCm
+We use **ROCProfiler** to measure the execution time of HIP kernels. Thus, it is a prerequisite for these experiments.
+
+## OPM Flow Version
+The OPM Flow version necessary for these experiments is the one in https://github.com/Vomartins/opm-simulators/tree/well-gpu. It is a branch based on the 2024.04 release.
 
 ### rocprof-profiling.sh
 This script is where the simulation is run. The input variables are handled by **multi-simulation-profiling.sh** but one can run this script by itself by providing the following input variable:
@@ -25,4 +29,5 @@ This script collects specific information about the simulations used in an exper
 The main workflow is done by running **multi-simulation-profiling.sh**. This script has one input data that can be
 1) spe1 -> To perform the experiment with SPE1 model;
 2) norne -> to perform the experiment with the Norne model.
+
 It constructs a set of simulations with the chosen model variants and flow command options defined as arrays inside the script. It calls **rocprof-profiling.sh** for each combination of parameters and calls **summarize.py** when the simulations are finished.
