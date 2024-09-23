@@ -1,9 +1,16 @@
 import re
 import os
 import pandas as pd
+import sys
+
+current_dir = os.getcwd()
 
 # Variable with the path to the main folder containing subfolders
-main_folder_path = "/home/vinicius/Dev/flow-release/rocprof/rocprof-outputs"  
+if len(sys.argv) > 1:
+    main_folder_path = current_dir+sys.argv[1]
+else:
+    main_folder_path = current_dir+"/rocprof-outputs"
+  
 # List with the phrases that precede the number
 phrase_list = ["Simulation time:", "Peaceman calc. time:", "Stdw computePerfRate time:", "Stdw apply time:", "GPU Stdw apply time:", "     Stdw apply counter:", "     GPU Stdw apply counter:", "Msw rate calc. time:", "Msw computePerfRate time:", "Msw apply time:",  "     Msw apply counter:", "       Msw data transfer time:"]
 
@@ -65,7 +72,7 @@ def extract_value_from_results_stats_csv(folder_path, kernel_string, kernel_col_
             break
     
     if results_stats_csv_file_name is None:
-        print("No results_stats CSV file found.")
+        #print("No results_stats CSV file found.")
         return -1
     
     results_stats_csv_file_path = os.path.join(folder_path, results_stats_csv_file_name)

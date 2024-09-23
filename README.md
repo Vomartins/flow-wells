@@ -7,6 +7,8 @@ We use **ROCProfiler** to measure the execution time of HIP kernels. Thus, it is
 ## OPM Flow Version
 The OPM Flow version necessary for these experiments is the one in https://github.com/Vomartins/opm-simulators/tree/well-gpu. It is a branch based on the 2024.04 release.
 
+## Scripts
+
 ### rocprof-profiling.sh
 This script is where the simulation is run. The input variables are handled by **multi-simulation-profiling.sh** but one can run this script by itself by providing the following input variable:
 1) reservoir : The name of the reservoir one needs to simulate. This can be any of the folder names in **opm-tests** repository;
