@@ -1,6 +1,5 @@
 *~
 rocprof-outputs/*
-!rocprof-outputs/
 roofline.py
 teste-pandas.py
 roofline_metrics.txt
