@@ -26,7 +26,7 @@ threads=1
 echo "$file_name --- $accelerator ––– $linsolver --- $trace_option"
 
 data_dir=/home/vinicius/Dev/opm-tests/$reservoir/$deck
-output_dir=/home/vinicius/Dev/flow-release/rocprof/rocprof-outputs/$file_name
+output_dir=$current_dir/rocprof-outputs/$file_name
 
 mkdir $output_dir
 
