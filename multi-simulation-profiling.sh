@@ -12,7 +12,7 @@ else
     exit
 fi
 
-accelerator_list=("none" "rocsparse")
+accelerator_list=("rocsparse")
 #("none" "rocalution" "rocsparse")
 linear_solver_list=("ilu0")
 #("ilu0" "cpr_quasiimpes")
